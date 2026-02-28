@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Pro - জীবন পাঠ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #00f2fe; --secondary: #f06292; --accent: #ffeb3b; 
+            --bg: #010409; --card-bg: rgba(255, 255, 255, 0.03);
+            --neon: 0 0 25px rgba(0, 242, 254, 0.6);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Hind Siliguri', sans-serif; }
+        body { background-color: var(--bg); color: #fff; overflow: hidden; height: 100vh; display: flex; justify-content: center; align-items: center; }
+        
+        /* Dynamic Animated Background */
+        .bg-animate { position: absolute; width: 100%; height: 100%; overflow: hidden; z-index: -1; }
+        .circle { position: absolute; border-radius: 50%; background: radial-gradient(circle, var(--primary), transparent); filter: blur(60px); opacity: 0.1; animation: float 20s infinite linear; }
+        @keyframes float { 0% { transform: translate(0, 0); } 50% { transform: translate(100px, 100px); } 100% { transform: translate(0, 0); } }
+
+        .container { width: 95%; max-width: 1350px; height: 94vh; position: relative; perspective: 1500px; }
+        
+        .slide { 
+            position: absolute; width: 100%; height: 100%; display: none; 
+            flex-direction: column; justify-content: center; align-items: center; 
+            text-align: center; padding: 35px; border-radius: 45px; 
+            background: rgba(13, 17, 23, 0.8); backdrop-filter: blur(50px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            box-shadow: 0 60px 120px rgba(0,0,0,1); overflow-y: auto;
+        }
+        
+        .active { display: flex; animation: slideEnter 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        @keyframes slideEnter { 
+            0% { opacity: 0; transform: translateZ(-500px) rotateX(15deg); filter: blur(10px); }
+            100% { opacity: 1; transform: translateZ(0) rotateX(0deg); filter: blur(0); }
+        }
+
+        h1 { font-size: 4rem; color: var(--primary); text-shadow: var(--neon); margin-bottom: 20px; font-family: 'Orbitron', sans-serif; }
+        h2 { font-size: 2.4rem; color: var(--accent); margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; border-left: 10px solid var(--secondary); padding-left: 20px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; width: 100%; margin-top: 20px; }
+        .card { 
+            background: var(--card-bg); padding: 25px; border-radius: 30px; 
+            border: 1px solid rgba(255, 255, 255, 0.05); text-align: left;
+            transition: 0.6s; position: relative; overflow: hidden;
+        }
+        .card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: linear-gradient(90deg, var(--primary), var(--secondary)); }
+        .card:hover { transform: scale(1.03) translateY(-10px); background: rgba(255, 255, 255, 0.08); border-color: var(--primary); }
+        .card b { color: var(--primary); font-size: 1.2rem; display: block; margin-bottom: 10px; }
+
+        i { font-style: italic; color: var(--secondary); font-weight: 700; }
+        u { text-decoration: underline; color: var(--accent); }
+        
+        .progress-container { position: absolute; bottom: -50px; left: 0; width: 100%; height: 12px; background: rgba(255,255,255,0.03); border-radius: 30px; }
+        .progress-bar { height: 100%; background: linear-gradient(90deg, #00f2fe, #f06292, #00f2fe); background-size: 200% 100%; width: 0%; border-radius: 30px; box-shadow: 0 0 20px var(--primary); animation: glow 3s linear infinite; }
+        @keyframes glow { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+        
+        ul { text-align: left; columns: 3; column-gap: 50px; list-style: none; width: 100%; padding: 30px; }
+        li { margin-bottom: 15px; padding: 12px 20px; border-radius: 15px; background: rgba(255,255,255,0.03); font-size: 1.1rem; border-right: 4px solid var(--primary); box-shadow: 5px 5px 15px rgba(0,0,0,0.3); }
+
+        .tag { background: linear-gradient(45deg, var(--secondary), #ff4081); padding: 8px 25px; border-radius: 100px; font-size: 0.9rem; font-weight: 900; margin-bottom: 25px; text-transform: uppercase; box-shadow: 0 10px 20px rgba(240, 98, 146, 0.3); }
+        .detail-text { font-size: 1.1rem; line-height: 1.8; color: #ced4da; text-align: justify; }
+    </style>
+</head>
+<body>
+    <div class="bg-animate">
+        <div class="circle" style="width:400px; height:400px; top:10%; left:10%;"></div>
+        <div class="circle" style="width:300px; height:300px; bottom:20%; right:15%; animation-delay: -5s;"></div>
+    </div>
+
+    <div class="container">
+        <div class="slide active">
+            <div class="tag">Biology Chapter 1</div>
+            <h1>জীবন পাঠ (Life Lesson)</h1>
+            <p style="font-size: 1.8rem; color: #f8f9fa; max-width: 900px; margin-bottom: 20px;">খাদ্য উৎপাদন, চিকিৎসাশাস্ত্রের উন্নয়ন ও বিরূপ পরিবেশে টিকে থাকাই আমাদের বর্তমান চ্যালেঞ্জ।</p>
+            <p class="detail-text" style="text-align: center;">জীবন হলো জড়ের এক জটিল সমাবেশ, যেখানে পদার্থবিজ্ঞান ও রসায়নের নিয়মগুলোই কাজ করে।</p>
+        </div>
+
+        <div class="slide">
+            <h2>ভৌত জীববিজ্ঞানের ১১টি শাখা (বিস্তারিত)</h2>
+            <div class="grid">
+                <div class="card"><b>১. Morphology:</b> জীবের অঙ্গসংস্থান বা দৈহিক গঠন নিয়ে আলোচনা।</div>
+                <div class="card"><b>২. Taxonomy:</b> জীবের শ্রেণিবিন্যাস ও নামকরণের নীতি।</div>
+                <div class="card"><b>৩. Physiology:</b> জৈবনিক কাজ (শ্বসন, রেচন, পুষ্টি) আলোচনা।</div>
+                <div class="card"><b>৪. Histology:</b> জীবদেহের টিস্যুসমূহের গঠন ও কাজ।</div>
+                <div class="card"><b>৫. Embryology:</b> জনন কোষের উৎপত্তি ও ভ্রূণের বিকাশ।</div>
+                <div class="card"><b>৬. Cytology:</b> কোষের গঠন, কাজ ও বিভাজন।</div>
+                <div class="card"><b>৭. Genetics:</b> জিন এবং বংশগতির ধারা সম্পর্কিত বিজ্ঞান।</div>
+                <div class="card"><b>৮. Evolution:</b> প্রাণের উৎপত্তি ও ক্রমবিকাশ।</div>
+                <div class="card"><b>৯. Ecology:</b> পরিবেশের সাথে জীবের আন্তঃসম্পর্ক।</div>
+                <div class="card"><b>১০. Endocrinology:</b> হরমোন ও নালিবিহীন গ্রন্থি।</div>
+                <div class="card"><b>১১. Biogeography:</b> পৃথিবীর বিভিন্ন অঞ্চলে জীবের বিস্তার।</div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>ফলিত জীববিজ্ঞানের ১৭টি শাখা</h2>
+            <ul>
+                <li>১. জীবাশ্মবিজ্ঞান</li><li>২. জীবপরিসংখ্যান</li><li>৩. পরজীবীবিদ্যা</li><li>৪. মৎস্যবিজ্ঞান</li><li>৫. কীটতত্ত্ব</li><li>৬. অণুজীববিজ্ঞান</li><li>৭. কৃষিবিজ্ঞান</li><li>৮. চিকিৎসাবিজ্ঞান</li><li>৯. জিনপ্রযুক্তি</li><li>১০. প্রাণরসায়ন</li><li>১১. পরিবেশবিজ্ঞান</li><li>১২. সামুদ্রিক জীববিদ্যা</li><li>১৩. বনবিজ্ঞান</li><li>১৪. জীবপ্রযুক্তি</li><li>১৫. ফার্মেসি</li><li>১৬. বন্যপ্রাণিবিদ্যা</li><li>১৭. বায়োইনফরমেটিকস্</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>কিংডম ১: মনেরা ও ২: প্রোটিস্টা</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="tag" style="background:var(--primary); color:#000;">MONERA</div>
+                    <p class="detail-text">এরা আদিকোষী (Prokaryotic), নিউক্লিয়াস পর্দাঘেরা নয়। এদের কোষে প্লাস্টিড ও মাইটোকন্ড্রিয়া নেই। কোষপ্রাচীর পেপটিডোগ্লাইকান দিয়ে গঠিত। খাদ্য শোষণ পদ্ধতিতে গ্রহণ করে। উদা: ব্যাকটেরিয়া, <i>Nostoc</i>।</p>
+                </div>
+                <div class="card">
+                    <div class="tag" style="background:var(--secondary);">PROTISTA</div>
+                    <p class="detail-text">সুকেন্দ্রিক (Eukaryotic), এককোষী বা বহুকোষী। সুগঠিত নিউক্লিয়াস ও সকল অঙ্গাণু বিদ্যমান। এদের জনন অযৌন ও যৌন (কনজুগেশন) উভয় প্রকৃতির। উদা: অ্যামিবা, <i>Euglena</i>, প্যারামেসিয়াম।</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>কিংডম ৩: ফানজাই ও ৪: প্লানটি</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="tag" style="background:#ff9800;">FUNGI</div>
+                    <p class="detail-text">এরা অধিকাংশ স্থলজ, মৃতজীবী। ক্লোরোপ্লাস্ট নেই বিধায় সালোকসংশ্লেষণ করতে পারে না। এদের কোষপ্রাচীর <b>কাইটিন (Chitin)</b> নামক পদার্থ দিয়ে গঠিত। উদা: মাশরুম (<i>Agaricus</i>), ইস্ট।</p>
+                </div>
+                <div class="card">
+                    <div class="tag" style="background:#4caf50;">PLANTAE</div>
+                    <p class="detail-text">এরা সালোকসংশ্লেষণকারী স্বভোজী। উন্নত টিস্যুতন্ত্র ও ভ্রূণ সৃষ্টি হয়। এদের জনন অ্যানাইসোগ্যামাস প্রকৃতির। এদের কোষে বড় কোষগহ্বর থাকে। উদা: উন্নত সবুজ উদ্ভিদ, আম, জাম।</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>দ্বিপদ নামকরণের পূর্ণাঙ্গ নিয়মাবলী</h2>
+            <div class="grid" style="grid-template-columns: 1fr;">
+                <div class="card detail-text">
+                    ১. ভাষা হতে হবে ল্যাটিন। <br>
+                    ২. নামের দুটি অংশ থাকবে: প্রথমটি <u>গণ</u> (Genus) ও দ্বিতীয়টি <u>প্রজাতি</u> (Species)। <br>
+                    ৩. প্রতিটি নাম বিশ্বে অনন্য (Unique) হতে হবে। <br>
+                    ৪. গণের প্রথম অক্ষর বড় হাতের (Capital) এবং প্রজাতির প্রথম অক্ষর ছোট হাতের হবে। <br>
+                    ৫. মুদ্রণের সময় অবশ্যই ইটালিক (<i>Italic</i>) অক্ষরে লিখতে হবে। <br>
+                    ৬. হাতে লিখলে গণ ও প্রজাতির নিচে আলাদা আলাদা দাগ (Underline) দিতে হবে। <br>
+                    ৭. নামের শেষে আবিষ্কারকের নাম ও সাল যুক্ত করা হয় (যেমন: <i>Homo sapiens</i> L. 1758)।
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2>প্রয়োজনীয় সকল বৈজ্ঞানিক নামসমূহ</h2>
+            <div class="grid" style="grid-template-columns: repeat(3, 1fr); font-size: 0.95rem;">
+                <div class="card">মানুষ: <i>Homo sapiens</i></div>
+                <div class="card">রুই মাছ: <i>Labeo rohita</i></div>
+                <div class="card">ঢাকার ব্যাঙ: <i>Zakerana dhaka</i></div>
+                <div class="card">গোল আলু: <i>Solanum tuberosum</i></div>
+                <div class="card">ধান: <i>Oryza sativa</i></div>
+                <div class="card">পাট: <i>Corchorus capsularis</i></div>
+                <div class="card">আম: <i>Mangifera indica</i></div>
+                <div class="card">কাঁঠাল: <i>Artocarpus heterophyllus</i></div>
+                <div class="card">শাপলা: <i>Nymphaea nouchali</i></div>
+                <div class="card">দোয়েল: <i>Copsychus saularis</i></div>
+                <div class="card">বাঘ: <i>Panthera tigris</i></div>
+                <div class="card">সিংহ: <i>Panthera leo</i></div>
+                <div class="card">মৌমাছি: <i>Apis indica</i></div>
+                <div class="card">ম্যালেরিয়া জীবাণু: <i>Plasmodium vivax</i></div>
+                <div class="card">আতা: <i>Annona reticulata</i></div>
+            </div>
+        </div>
+
+        <div class="progress-container"><div class="progress-bar" id="pb"></div></div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const progressBar = document.getElementById('pb');
+        let current = 0;
+        const duration = 9000; // ৯ সেকেন্ড প্রতি স্লাইড
+        let startTime = Date.now();
+
+        function update() {
+            let elapsed = Date.now() - startTime;
+            let prg = (elapsed / duration) * 100;
+            progressBar.style.width = prg + '%';
+            if (prg >= 100) {
+                slides[current].classList.remove('active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('active');
+                startTime = Date.now();
+            }
+            requestAnimationFrame(update);
+        }
+        update();
+    </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Pro-Note: Chapter 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a; --card: #1e293b; --primary: #38bdf8;
+            --secondary: #818cf8; --accent: #22d3ee; --text: #f1f5f9;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Hind Siliguri', sans-serif; }
+        body { background-color: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden; }
+        
+        .hero { 
+            background: linear-gradient(135deg, #1e40af, #7e22ce); 
+            padding: 80px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .hero h1 { font-size: 3.5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+
+        .container { max-width: 1100px; margin: -50px auto 100px; padding: 20px; }
+
+        .section { 
+            background: var(--card); border-radius: 24px; padding: 45px; 
+            margin-bottom: 50px; border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        h2 { font-size: 2.2rem; color: var(--accent); margin-bottom: 25px; border-bottom: 2px solid var(--primary); display: inline-block; }
+
+        .content-layout { display: flex; flex-direction: column; gap: 40px; }
+        @media (min-width: 900px) { .content-layout { flex-direction: row; align-items: flex-start; } }
+
+        .text-side { flex: 1.3; font-size: 1.2rem; }
+        .text-side p { margin-bottom: 20px; text-align: justify; }
+        .text-side b { color: var(--primary); font-size: 1.3rem; }
+
+        .image-side { 
+            flex: 0.7; background: #000; padding: 10px; border-radius: 15px; 
+            border: 2px solid var(--secondary); box-shadow: 0 0 20px rgba(129, 140, 248, 0.2);
+        }
+        .image-side img { width: 100%; border-radius: 10px; display: block; }
+        .caption { text-align: center; font-size: 0.9rem; margin-top: 10px; color: var(--primary); font-weight: bold; }
+
+        .highlight-box { 
+            background: rgba(56, 189, 248, 0.1); border-left: 5px solid var(--primary); 
+            padding: 20px; border-radius: 10px; margin: 20px 0;
+        }
+
+        footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); color: #64748b; }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>কোষ বিভাজন</h1>
+        <p>অধ্যায় ৩: জীবের ধারাবাহিকতা ও বংশগতি</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="section">
+            <h2>১. অ্যামাইটোসিস (অপ্রত্যক্ষ বিভাজন)</h2>
+            <div class="content-layout">
+                <div class="text-side">
+                    <p><b>প্রক্রিয়া:</b> এটি কোষ বিভাজনের সবচেয়ে সরল ও আদি পদ্ধতি। এই পদ্ধতিতে কোনো জটিল ধারাবাহিক পর্যায় ছাড়াই মাতৃকোষের নিউক্লিয়াস ও সাইটোপ্লাজম সরাসরি বিভক্ত হয়ে দুটি অপত্য কোষ সৃষ্টি করে।</p>
+                    <p>বিভাজনের শুরুতে নিউক্লিয়াসটি ধীরে ধীরে লম্বা হতে থাকে এবং মাঝখানে সংকুচিত হয়ে ডাম্বেলের আকার ধারণ করে। পরে এটি মাঝখানে ভেঙে গিয়ে দুটি অপত্য নিউক্লিয়াসে পরিণত হয়। এরপর কোষপ্রাচীরটিও মাঝ বরাবর সংকুচিত হয়ে দুই ভাগে ভাগ হয়ে যায়। উদাহরণ: <b>ব্যাকটেরিয়া, ইস্ট, ছত্রাক ও অ্যামিবা।</b></p>
+                </div>
+                <div class="image-side">
+                    <img src="amitosis.jpg" alt="Amitosis Diagram">
+                    <div class="caption">চিত্র ৩.১: অ্যামাইটোসিস বিভাজন</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>২. মাইটোসিস (সমীকরণিক বিভাজন)</h2>
+            <div class="content-layout">
+                <div class="image-side">
+                    <img src="mitosis.jpg" alt="Mitosis Diagram">
+                    <div class="caption">চিত্র ৩.২: মাইটোসিসের বিভিন্ন পর্যায়</div>
+                </div>
+                <div class="text-side">
+                    <p><b>বর্ণনা:</b> মাইটোসিস উন্নত উদ্ভিদ ও প্রাণীর দেহকোষের একটি বিশেষ বিভাজন পদ্ধতি। এখানে মাতৃকোষের নিউক্লিয়াস ও ক্রোমোজোম একবার করে বিভক্ত হয়। ফলে অপত্য কোষে ক্রোমোজোম সংখ্যা, গুণাগুণ ও বৈশিষ্ট্য মাতৃকোষের হুবহু একই থাকে। এজন্য একে <b>Equational Division</b> বলা হয়।</p>
+                    <div class="highlight-box">
+                        <b>ধাপসমূহ:</b> ১. প্রোফেজ, ২. প্রো-মেটাফেজ, ৩. মেটাফেজ, ৪. অ্যানাফেজ এবং ৫. টেলোফেজ।
+                    </div>
+                    <p>অ্যানাফেজ ধাপে ক্রোমোজোমগুলো সেন্ট্রোমিয়ারের অবস্থান অনুযায়ী ইংরেজি বর্ণমালা <b>V, L, J বা I</b> এর মতো আকৃতি ধারণ করে মেরুর দিকে অগ্রসর হয়।</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>৩. মিয়োসিস (হ্রাসমূলক বিভাজন)</h2>
+            <div class="content-layout">
+                <div class="text-side">
+                    <p><b>প্রক্রিয়া:</b> জনন মাতৃকোষে মিয়োসিস ঘটে। এই প্রক্রিয়ায় নিউক্লিয়াস দুইবার এবং ক্রোমোজোম মাত্র একবার বিভক্ত হয়। ফলে অপত্য কোষে ক্রোমোজোম সংখ্যা মাতৃকোষের তুলনায় <b>অর্ধেক</b> হয়ে যায়।</p>
+                    <p><b>গুরুত্ব:</b> প্রজাতির ক্রোমোজোম সংখ্যা প্রজন্ম থেকে প্রজন্মে ধ্রুব রাখতে মিয়োসিস অপরিহার্য। এছাড়া ক্রসিং ওভারের মাধ্যমে জিনের বিনিময় ঘটে, যা জীবের মধ্যে বৈচিত্র্য বা প্রকরণ সৃষ্টি করে। মিয়োসিস না হলে ক্রোমোজোম সংখ্যা প্রতি প্রজন্মে দ্বিগুণ হয়ে যেত।</p>
+                </div>
+                <div class="image-side">
+                    <img src="meiosis.jpg" alt="Meiosis Diagram">
+                    <div class="caption">চিত্র ৩.৩: মিয়োসিস বিভাজন</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Biology Masterclass 2026 © All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

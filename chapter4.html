@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Mastery: Chapter 4 Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00ff88; --secondary: #00d2ff; --accent: #ffea00;
+            --dark-bg: #0f172a; --card-bg: rgba(255, 255, 255, 0.05);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Hind Siliguri', sans-serif; }
+        body { background: #010409; color: #e2e8f0; line-height: 1.8; }
+        
+        .header { 
+            background: linear-gradient(135deg, #065f46, #064e3b); 
+            padding: 80px 20px; text-align: center; border-bottom: 5px solid var(--primary);
+        }
+        .header h1 { font-family: 'Orbitron', sans-serif; font-size: 3.5rem; color: var(--primary); }
+
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+
+        .section { 
+            background: var(--card-bg); backdrop-filter: blur(15px); border-radius: 25px;
+            padding: 45px; margin-bottom: 50px; border: 1px solid rgba(255,255,255,0.1);
+        }
+        h2 { font-size: 2.3rem; color: var(--accent); margin-bottom: 25px; display: flex; align-items: center; gap: 15px; }
+        h2::before { content: '⚡'; }
+
+        .content-box { display: grid; grid-template-columns: 1fr; gap: 40px; }
+        @media (min-width: 900px) { .content-box { grid-template-columns: 1.2fr 0.8fr; } }
+
+        .text-part { font-size: 1.25rem; text-align: justify; }
+        .text-part b { color: var(--primary); font-size: 1.4rem; }
+
+        .image-container { 
+            background: #000; border-radius: 20px; padding: 10px; 
+            border: 2px solid var(--secondary); text-align: center;
+        }
+        .image-container img { width: 100%; border-radius: 10px; display: block; }
+        .caption { color: var(--secondary); font-weight: bold; margin-top: 12px; font-size: 1rem; }
+
+        .highlight-card { 
+            background: rgba(0, 255, 136, 0.1); border-left: 6px solid var(--primary); 
+            padding: 25px; border-radius: 15px; margin-top: 25px;
+        }
+
+        .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
+        .process-card { background: rgba(255,255,255,0.03); padding: 25px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
+        .process-card h3 { color: var(--secondary); margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>জীবনীশক্তি (Bioenergetics)</h1>
+        <p>চতুর্থ অধ্যায়: জীবনের শক্তি ও শ্বসন</p>
+    </div>
+
+    <div class="container">
+        
+        <div class="section">
+            <h2>ATP এবং শক্তির সঞ্চয়</h2>
+            <div class="content-box">
+                <div class="text-part">
+                    <p><b>ATP (Adenosine Triphosphate):</b> একে কোষের <b>'জৈব মুদ্রা' বা 'Biological Currency'</b> বলা হয়। কোষে বিভিন্ন রাসায়নিক বিক্রিয়া থেকে মুক্ত শক্তি ATP অণুর ভেতরে রাসায়নিক বন্ধনীতে জমা থাকে।</p>
+                    <p>যখন কোষের কোনো কাজের জন্য শক্তির প্রয়োজন হয়, তখন ATP ভেঙে ADP (Adenosine Diphosphate) এবং অজৈব ফসফেটে (Pi) পরিণত হয় এবং প্রচুর শক্তি (প্রায় ৭.৩ কিলোক্যালরি/মোল) উৎপন্ন করে। এই প্রক্রিয়াটি রিচার্জেবল ব্যাটারির মতো কাজ করে।</p>
+                </div>
+                <div class="image-container">
+                    <img src="atp_cycle.jpg" alt="ATP Cycle Diagram">
+                    <div class="caption">চিত্র ৪.১: ATP চক্র (শক্তির সঞ্চয় ও মুক্তি)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>সালোকসংশ্লেষণ (Photosynthesis)</h2>
+            <div class="text-part">
+                <p>সবুজ উদ্ভিদ সূর্যালোকের উপস্থিতিতে পানি ও কার্বন ডাই-অক্সাইড ব্যবহার করে শর্করা জাতীয় খাদ্য তৈরি করার প্রক্রিয়াকে সালোকসংশ্লেষণ বলে। এটি দুটি প্রধান পর্যায়ে সম্পন্ন হয়:</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <h3>আলোক নির্ভর পর্যায়</h3>
+                    <p>এই পর্যায়ে সৌরশক্তি রাসায়নিক শক্তিতে (ATP ও NADPH) রূপান্তরিত হয়। পানির আলোক বিভাজন বা <b>ফটোলাইসিস</b> এখানে ঘটে, যার ফলে অক্সিজেন মুক্ত হয়। ক্লোরোপ্লাস্টের গ্রানাম অংশে এটি সম্পন্ন হয়।</p>
+                </div>
+                <div class="process-card">
+                    <h3>আলোক নিরপেক্ষ পর্যায় (অন্ধকার পর্যায়)</h3>
+                    <p>এই পর্যায়ে আলোক পর্যায়ে তৈরি শক্তি ব্যবহার করে কার্বন ডাই-অক্সাইড থেকে গ্লুকোজ তৈরি হয়। এর প্রধান পথগুলো হলো <b>C3 চক্র (ক্যালভিন চক্র)</b> এবং <b>C4 চক্র (হ্যাচ ও স্ল্যাক পথ)</b>।</p>
+                </div>
+            </div>
+
+            <div class="image-container" style="margin-top: 30px;">
+                <img src="photosynthesis.jpg" alt="Photosynthesis Process">
+                <div class="caption">চিত্র ৪.২: সালোকসংশ্লেষণ প্রক্রিয়া ও ক্লোরোপ্লাস্টের ভূমিকা</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>শ্বসন (Respiration)</h2>
+            <div class="content-box">
+                <div class="image-container">
+                    <img src="respiration.jpg" alt="Respiration Stages">
+                    <div class="caption">চিত্র ৪.৩: শ্বসন প্রক্রিয়া ও ক্রেবস চক্র</div>
+                </div>
+                <div class="text-part">
+                    <p>শ্বসন প্রক্রিয়ায় কোষস্থ খাদ্য (গ্লুকোজ) জারিত হয়ে শক্তি উৎপন্ন হয়। শ্বসন দুই প্রকার:</p>
+                    <div class="highlight-card">
+                        <b>১. সবাত শ্বসন (Aerobic Respiration):</b> অক্সিজেনের উপস্থিতিতে গ্লুকোজ সম্পূর্ণ জারিত হয়ে কার্বন ডাই-অক্সাইড, পানি এবং প্রচুর শক্তি (৩৮টি ATP) উৎপন্ন করে। এর ধাপগুলো হলো: গ্লাইকোলাইসিস, অ্যাসিটাইল কো-এ সৃষ্টি, ক্রেবস চক্র এবং ইলেকট্রন ট্রান্সপোর্ট সিস্টেম।
+                    </div>
+                    <div class="highlight-card">
+                        <b>২. অবাত শ্বসন (Anaerobic Respiration):</b> অক্সিজেনের অনুপস্থিতিতে গ্লুকোজ আংশিক জারিত হয়ে ল্যাকটিক এসিড বা ইথাইল অ্যালকোহল এবং সামান্য শক্তি (২টি ATP) উৎপন্ন করে। এটি ইস্ট বা কিছু ব্যাকটেরিয়ায় ঘটে।
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

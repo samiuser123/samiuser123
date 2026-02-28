@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>জীবকোষ ও টিস্যু - বিস্তারিত মাস্টারক্লাস</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --primary-color: #00796b;
+            --secondary-color: #004d40;
+            --card-bg: #ffffff;
+            --accent: #ffb300;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Hind Siliguri', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.8; }
+        
+        header { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 40px 20px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        header h1 { font-size: 2.8rem; margin-bottom: 10px; }
+        header p { font-size: 1.2rem; opacity: 0.9; }
+
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        
+        .section { background: var(--card-bg); border-radius: 15px; padding: 35px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .section-title { font-size: 2rem; color: var(--primary-color); border-bottom: 3px solid var(--accent); padding-bottom: 10px; margin-bottom: 25px; display: inline-block; }
+        
+        .content-block { display: flex; flex-direction: column; gap: 25px; margin-bottom: 30px; }
+        @media (min-width: 768px) { .content-block { flex-direction: row; align-items: flex-start; } }
+        
+        .text-block { flex: 1.5; font-size: 1.15rem; text-align: justify; color: #444; }
+        .text-block p { margin-bottom: 15px; }
+        .text-block b { color: var(--secondary-color); font-size: 1.25rem; }
+        
+        .img-block { flex: 1; text-align: center; }
+        .img-block img { width: 100%; max-width: 400px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .img-caption { font-size: 0.9rem; color: #666; margin-top: 10px; font-style: italic; }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media (min-width: 768px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+        
+        .info-card { background: #fdfdfd; border: 1px solid #e0e0e0; border-left: 5px solid var(--primary-color); padding: 20px; border-radius: 8px; }
+        ul.custom-list { list-style: none; padding-left: 10px; }
+        ul.custom-list li { position: relative; padding-left: 25px; margin-bottom: 12px; }
+        ul.custom-list li::before { content: "➤"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>জীবকোষ ও টিস্যু (দ্বিতীয় অধ্যায়)</h1>
+        <p>উদ্ভিদ ও প্রাণিকোষের বিস্তারিত গঠন, অঙ্গাণুসমূহ এবং টিস্যুতন্ত্র</p>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title">১. কোষের গঠন ও প্রকারভেদ</h2>
+            <div class="content-block">
+                <div class="text-block">
+                    <p><b>কোষপ্রাচীর (Cell Wall):</b> এটি উদ্ভিদ কোষের একটি অন্যতম গুরুত্বপূর্ণ বৈশিষ্ট্য। এটি মৃত বা জড়বস্তু দিয়ে তৈরি। প্রাণিকোষে কোষপ্রাচীর থাকে না। এর রাসায়নিক গঠন বেশ জটিল; এতে সেলুলোজ, হেমিসেলুলোজ, লিগনিন, পেকটিন, সুবেরিন থাকে। ব্যাকটেরিয়ার কোষপ্রাচীর প্রোটিন, লিপিড ও পলিস্যাকারাইড দিয়ে এবং ছত্রাকের কোষপ্রাচীর কাইটিন দিয়ে তৈরি। এটি কোষকে দৃঢ়তা প্রদান করে, আকার বজায় রাখে এবং প্লাজমোডেজমাটার মাধ্যমে যোগাযোগ রক্ষা করে।</p>
+                    <p><b>কোষঝিল্লি (Plasmalemma):</b> প্রোটোপ্লাজমের বাইরে দুই স্তরের স্থিতিস্থাপক পর্দা। কোষঝিল্লির ভাঁজকে মাইক্রোভিলাই বলে। এটি লিপিড ও প্রোটিন দিয়ে তৈরি এবং বৈষম্যভেদ্য পর্দা হিসেবে কাজ করে।</p>
+                </div>
+                <div class="img-block">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Plant_cell_structure_svg.svg/800px-Plant_cell_structure_svg.svg.png" alt="Plant Cell Structure">
+                    <div class="img-caption">চিত্র: আদর্শ উদ্ভিদকোষের বিভিন্ন অঙ্গাণু</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">২. গুরুত্বপূর্ণ সাইটোপ্লাজমীয় অঙ্গাণু</h2>
+            
+            <div class="content-block">
+                <div class="img-block">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Animal_mitochondrion_diagram_en_%28edit%29.svg/800px-Animal_mitochondrion_diagram_en_%28edit%29.svg.png" alt="Mitochondria">
+                    <div class="img-caption">চিত্র: মাইটোকন্ড্রিয়ার অন্তর্গঠন (ক্রিস্টি ও ম্যাট্রিক্স)</div>
+                </div>
+                <div class="text-block">
+                    <p><b>মাইটোকন্ড্রিয়া (Mitochondria):</b> ১৮৮৬ সালে রিচার্ড অল্টম্যান এটি আবিষ্কার করেন এবং 'বায়োব্লাস্ট' নাম দেন; বর্তমান নাম দেন বিজ্ঞানী বেনডা। এটি দুই স্তরবিশিষ্ট আবরণী দিয়ে ঘেরা। ভেতরের স্তরটি ভেতরের দিকে আঙ্গুলের মতো ভাঁজ হয়ে থাকে, এদের <b>ক্রিস্টি (cristae)</b> বলে। ক্রিস্টির গায়ে বৃন্তযুক্ত গোলাকার বস্তু থাকে, এদের অক্সিজোম বলে। এর ভেতরের তরলকে <b>ম্যাট্রিক্স (matrix)</b> বলে। শ্বসনের অত্যন্ত গুরুত্বপূর্ণ ধাপ ক্রেবস চক্র এখানেই সম্পন্ন হয়। এখানে সবচেয়ে বেশি শক্তি উৎপাদিত হয় বলে একে কোষের <b>'শক্তি উৎপাদন কেন্দ্র' বা 'পাওয়ার হাউস'</b> বলা হয়।</p>
+                </div>
+            </div>
+
+            <div class="content-block">
+                <div class="text-block">
+                    <p><b>প্লাস্টিড (Plastid):</b> বিজ্ঞানী আর্নস্ট হেকেল ১৮৬৬ সালে এটি আবিষ্কার করেন। এর প্রধান কাজ খাদ্য প্রস্তুত করা, খাদ্য সঞ্চয় করা এবং উদ্ভিদদেহকে আকর্ষণীয় করে পরাগায়নে সাহায্য করা।</p>
+                    <ul class="custom-list">
+                        <li><b>ক্লোরোপ্লাস্ট:</b> সবুজ রঙের প্লাস্টিড। প্লাস্টিডের 'গ্রানা' অংশ সূর্যালোককে আবদ্ধ করে এবং 'স্ট্রোমা' অংশে শর্করা তৈরি করে। ఇందులో ক্লোরোফিল ও ক্যারোটিনয়েড থাকে।</li>
+                        <li><b>ক্রোমোপ্লাস্ট:</b> রঙিন প্লাস্টিড (সবুজ নয়)। এতে জ্যান্থোফিল (হলুদ), ক্যারোটিন (কমলা), ফাইকোএরিথ্রিন (লাল) থাকে। এরা ফুল ও পাতাকে আকর্ষণীয় করে।</li>
+                        <li><b>লিউকোপ্লাস্ট:</b> এতে কোনো রঞ্জক পদার্থ থাকে না (যেমন- মূল)। এদের কাজ খাদ্য সঞ্চয় করা। আলোর সংস্পর্শে এলে এরা ক্লোরোপ্লাস্টে রূপান্তরিত হতে পারে।</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">৩. কোষের নিয়ন্ত্রণ ও পরিবহন</h2>
+            <div class="grid-2">
+                <div class="info-card">
+                    <b>গলজি বস্তু (Golgi body):</b> এটি সিস্টার্নি ও ভেসিকল নিয়ে তৈরি। এর পর্দায় এনজাইমের পানি বিয়োজন সম্পন্ন হয়। হরমোন নিঃসরণ এবং বিভিন্ন পদার্থ নিঃসৃতকরণে এর নিবিড় সম্পর্ক রয়েছে।
+                </div>
+                <div class="info-card">
+                    <b>লাইসোজোম (Lysosome):</b> এটি জীবকোষকে জীবাণুর হাত থেকে রক্ষা করে। এর উৎসেচক আগত জীবাণুগুলোকে হজম (ফ্যাগোসাইটোসিস) করে ফেলে। অক্সিজেনের অভাবে কোষ ধ্বংস করতে পারে।
+                </div>
+                <div class="info-card">
+                    <b>রাইবোজোম (Ribosome):</b> ঝিল্লিবিহীন অঙ্গাণু যা প্রধানত <b>প্রোটিন সংশ্লেষণে</b> সাহায্য করে। প্রোটিনের পলিপেপটাইড চেইন সংযোজন এখানেই হয়।
+                </div>
+                <div class="info-card">
+                    <b>সেন্ট্রোজোম:</b> প্রাণিকোষের নিউক্লিয়াসের কাছে দুটি ফাঁপা দণ্ডাকার অঙ্গাণু হলো সেন্ট্রিওল। এটি কোষ বিভাজনের সময় অ্যাস্টার রে এবং স্পিন্ডল যন্ত্র তৈরি করে।
+                </div>
+            </div>
+
+            <div class="content-block" style="margin-top: 30px;">
+                <div class="text-block">
+                    <p><b>নিউক্লিয়াস (Nucleus):</b> জীবকোষের প্রোটোপ্লাজমে নির্দিষ্ট পর্দাঘেরা ক্রোমোজোম বহনকারী সুস্পষ্ট বস্তুটিই নিউক্লিয়াস। এটি কোষে সংঘটিত বিপাকীয় কার্যাবলিসহ সব ক্রিয়া নিয়ন্ত্রণ করে। এর চারটি অংশ:
+                    ১. <b>নিউক্লিয়ার ঝিল্লি:</b> দ্বি-স্তরী লিপিড ও প্রোটিনের পর্দা যা ছিদ্রযুক্ত (নিউক্লিয়ার রন্ধ্র)। <br>
+                    ২. <b>নিউক্লিওপ্লাজম:</b> কেন্দ্রিকারস যেখানে নিউক্লিক এসিড, প্রোটিন থাকে। <br>
+                    ৩. <b>নিউক্লিওলাস:</b> RNA ও প্রোটিন দিয়ে তৈরি ঘন গোলাকার বস্তু। <br>
+                    ৪. <b>ক্রোমাটিন জালিকা:</b> জট পাকানো সুতার মতো অংশ। কোষ বিভাজনের সময় এগুলো খাটো ও মোটা হয়ে <b>ক্রোমোজোম</b> গঠন করে, যা DNA ধারণ করে।</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">৪. উদ্ভিদ ও প্রাণি টিস্যু</h2>
+            <div class="text-block">
+                <p>একই বা বিভিন্ন প্রকারের একগুচ্ছ কোষ একত্রিত হয়ে একই কাজ করলে তাদের টিস্যু বা কলা বলে।</p>
+                
+                <p><b>উদ্ভিদের জটিল টিস্যু (পরিবহন টিস্যু):</b></p>
+                <ul class="custom-list">
+                    <li><b>জাইলেম (Xylem):</b> ট্রাকিড, ভেসেল, জাইলেম প্যারেনকাইমা এবং ফাইবার নিয়ে গঠিত। এটি মূল থেকে <b>পানি ও খনিজ লবণ</b> উদ্ভিদের উপরের দিকে পরিবহন করে।</li>
+                    <li><b>ফ্লোয়েম (Phloem):</b> সিভনল, সঙ্গী কোষ, ফ্লোয়েম প্যারেনকাইমা ও ফাইবার নিয়ে গঠিত। এটি পাতায় তৈরি <b>খাদ্য</b> উদ্ভিদের বিভিন্ন স্থানে পরিবহন করে।</li>
+                </ul>
+
+                <p style="margin-top: 20px;"><b>প্রাণিটিস্যুর প্রকারভেদ:</b></p>
+                <ul class="custom-list">
+                    <li><b>আবরণী টিস্যু:</b> দেহের উন্মুক্ত অংশ আবৃত করে (যেমন: স্কুয়ামাস, কিউবডাল, কলামনার)।</li>
+                    <li><b>যোজক টিস্যু:</b> রক্ত (তরল যোজক), অস্থি ও তরুণাস্থি (কঙ্কাল যোজক)। রক্ত অক্সিজেন পরিবহন করে।</li>
+                    <li><b>পেশি টিস্যু:</b> ঐচ্ছিক (হাতে-পায়ে থাকে), অনৈচ্ছিক (পাকস্থলীতে থাকে) এবং <b>হৃদপেশি</b> (হৃৎপিণ্ডে থাকে যা অনৈচ্ছিক হলেও গঠনে ঐচ্ছিকের মতো)।</li>
+                    <li><b>স্নায়ু টিস্যু (নিউরন):</b> উদ্দীপনা গ্রহণ করে মস্তিষ্কে পাঠায়। এর প্রধান অংশ হলো কোষদেহ, ডেনড্রাইট এবং লম্বা অ্যাক্সন।</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

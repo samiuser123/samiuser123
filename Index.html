@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biology Book Summary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00f2fe; --secondary: #4facfe; --accent: #00ff88;
+            --bg: #0b0f19; --card-bg: rgba(255, 255, 255, 0.05);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Hind Siliguri', sans-serif; }
+        
+        body { 
+            background: radial-gradient(circle at center, #1e293b, #0b0f19); 
+            color: #e2e8f0; min-height: 100vh; overflow-x: hidden;
+            display: flex; flex-direction: column; align-items: center;
+        }
+
+        /* Animated Background Particles Concept */
+        .bg-glow {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.3; z-index: -1;
+        }
+
+        header {
+            text-align: center; padding: 60px 20px; animation: fadeInDown 1s ease-out;
+        }
+        header h1 { 
+            font-family: 'Orbitron', sans-serif; font-size: 3.5rem; 
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-transform: uppercase; letter-spacing: 5px;
+        }
+        header p { font-size: 1.2rem; color: #94a3b8; margin-top: 10px; }
+
+        .dashboard {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px; width: 90%; max-width: 1200px; padding-bottom: 50px;
+        }
+
+        .chapter-card {
+            background: var(--card-bg); backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 25px;
+            padding: 40px 30px; text-align: center; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none; color: white; position: relative; overflow: hidden;
+            display: flex; flex-direction: column; justify-content: space-between;
+        }
+
+        .chapter-card::before {
+            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+            background: radial-gradient(circle, rgba(79, 172, 254, 0.1) 0%, transparent 70%);
+            transition: 0.5s;
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-15px); border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(0, 242, 254, 0.2);
+        }
+
+        .chapter-card i { font-size: 3rem; margin-bottom: 20px; display: block; }
+        .chapter-card h2 { font-size: 1.8rem; margin-bottom: 15px; color: var(--accent); }
+        .chapter-card p { font-size: 1rem; color: #cbd5e1; margin-bottom: 25px; }
+
+        .btn {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            padding: 12px 25px; border-radius: 50px; font-weight: bold;
+            text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;
+            transition: 0.3s; box-shadow: 0 4px 15px rgba(0, 242, 254, 0.3);
+        }
+
+        .chapter-card:hover .btn { transform: scale(1.1); box-shadow: 0 0 20px var(--primary); }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer { margin-top: auto; padding: 30px; color: #64748b; font-size: 0.9rem; }
+
+        /* Icon Colors */
+        .c1 { border-top: 5px solid #ff4757; }
+        .c2 { border-top: 5px solid #2ed573; }
+        .c3 { border-top: 5px solid #eccc68; }
+        .c4 { border-top: 5px solid #70a1ff; }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <header>
+        <h1>Bio-logy by Sami</h1>
+        <p>জীববিজ্ঞান নবম-দশম শ্রেণি: কমপ্লিট স্টাডি ড্যাশবোর্ড</p>
+    </header>
+
+    <div class="dashboard">
+        
+        <a href="chapter1.html" class="chapter-card c1">
+            <div>
+                <i>🔬</i>
+                <h2>অধ্যায় ১</h2>
+                <p>জীবন পাঠ: শ্রেণিবিন্যাস ও জীববিজ্ঞানের শাখাসমূহ</p>
+            </div>
+            <span class="btn">পড়ুন</span>
+        </a>
+
+        <a href="chapter2.html" class="chapter-card c2">
+            <div>
+                <i>🌿</i>
+                <h2>অধ্যায় ২</h2>
+                <p>জীবকোষ ও টিস্যু: উদ্ভিদ ও প্রাণিকোষের বিস্তারিত গঠন</p>
+            </div>
+            <span class="btn">পড়ুন</span>
+        </a>
+
+        <a href="chapter3.html" class="chapter-card c3">
+            <div>
+                <i>🧬</i>
+                <h2>অধ্যায় ৩</h2>
+                <p>কোষ বিভাজন: মাইটোসিস ও মিয়োসিসের ধাপসমূহ</p>
+            </div>
+            <span class="btn">পড়ুন</span>
+        </a>
+
+        <a href="chapter4.html" class="chapter-card c4">
+            <div>
+                <i>⚡</i>
+                <h2>অধ্যায় ৪</h2>
+                <p>জীবনীশক্তি: সালোকসংশ্লেষণ, শ্বসন ও ATP চক্র</p>
+            </div>
+            <span class="btn">পড়ুন</span>
+        </a>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Biology Pro Dashboard | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
